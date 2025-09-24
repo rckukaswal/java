@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "id": "basics",
+      "name": "Java Basics",
+      "description": "Fundamental concepts of Java programming language",
+      "icon": "fas fa-code"
+    },
+    {
+      "id": "oop",
+      "name": "Object-Oriented Programming",
+      "description": "Principles of OOP and their implementation in Java",
+      "icon": "fas fa-cube"
+    },
+    {
+      "id": "collections",
+      "name": "Collections Framework",
+      "description": "Java Collections API and data structures",
+      "icon": "fas fa-layer-group"
+    },
+    {
+      "id": "exceptions",
+      "name": "Exception Handling",
+      "description": "Error handling and exception management in Java",
+      "icon": "fas fa-exclamation-triangle"
+    },
+    {
+      "id": "multithreading",
+      "name": "Multithreading",
+      "description": "Concurrent programming and thread management",
+      "icon": "fas fa-tasks"
+    },
+    {
+      "id": "file-io",
+      "name": "File I/O",
+      "description": "Reading from and writing to files in Java",
+      "icon": "fas fa-file-alt"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Introduction to Java",
+      "category": "basics",
+      "description": "Overview of Java programming language, its features, and environment setup.",
+      "tags": ["introduction", "setup", "jvm"],
+      "content": "# Introduction to Java\n\nJava is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle). It was first released in 1995 and has since become one of the most popular programming languages in the world.\n\n## Key Features of Java\n\n- **Platform Independent**: Java programs can run on any device that has a Java Virtual Machine (JVM)\n- **Object-Oriented**: Follows OOP principles like encapsulation, inheritance, and polymorphism\n- **Simple**: Easy to learn with a clean syntax\n- **Secure**: Provides security features like bytecode verification and sandboxing\n- **Multithreaded**: Supports concurrent programming\n- **Robust**: Strong memory management and exception handling\n\n## Java Environment Setup\n\nTo start programming in Java, you need:\n\n1. **JDK (Java Development Kit)**: Includes tools for developing Java applications\n2. **JRE (Java Runtime Environment)**: Needed to run Java applications\n3. **IDE (Integrated Development Environment)**: Such as Eclipse, IntelliJ IDEA, or NetBeans\n\n## Your First Java Program\n\n```java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\n\nThis simple program demonstrates:\n- Class declaration\n- Main method (entry point of Java applications)\n- Output to console using System.out.println()\n\n## How Java Works\n\n1. Write Java code in .java files\n2. Compile with javac compiler to create .class files (bytecode)\n3. JVM executes the bytecode on any platform\n\nJava's \"write once, run anywhere\" philosophy makes it highly versatile for various applications from web development to mobile apps."
+    },
+    {
+      "id": 2,
+      "title": "Variables and Data Types",
+      "category": "basics",
+      "description": "Understanding variables, data types, and type casting in Java.",
+      "tags": ["variables", "data types", "primitive", "reference"],
+      "content": "# Variables and Data Types in Java\n\nVariables are containers for storing data values in Java. Each variable has a specific type, which determines the size and layout of the variable's memory.\n\n## Variable Declaration\n\n```java\n// Syntax: type variableName = value;\nint age = 25;\nString name = \"John\";\ndouble salary = 50000.50;\n```\n\n## Java Data Types\n\nJava has two categories of data types:\n\n### 1. Primitive Data Types\n\n| Type | Size | Description | Example |\n|------|------|-------------|---------|\n| byte | 1 byte | Whole numbers from -128 to 127 | `byte b = 100;` |\n| short | 2 bytes | Whole numbers from -32,768 to 32,767 | `short s = 1000;` |\n| int | 4 bytes | Whole numbers from -2^31 to 2^31-1 | `int i = 100000;` |\n| long | 8 bytes | Whole numbers from -2^63 to 2^63-1 | `long l = 100000L;` |\n| float | 4 bytes | Fractional numbers (6-7 decimal digits) | `float f = 3.14f;` |\n| double | 8 bytes | Fractional numbers (15 decimal digits) | `double d = 3.14159;` |\n| boolean | 1 bit | true or false values | `boolean flag = true;` |\n| char | 2 bytes | Single character/letter | `char c = 'A';` |\n\n### 2. Reference Data Types\n\n- **Strings**: Sequence of characters\n- **Arrays**: Collection of similar type elements\n- **Classes**: User-defined data types\n- **Interfaces**: Blueprint of classes\n\n## Type Casting\n\nConverting one data type to another:\n\n```java\n// Widening Casting (automatically)\nint myInt = 9;\ndouble myDouble = myInt; // Automatic casting: int to double\n\n// Narrowing Casting (manually)\ndouble myDouble = 9.78;\nint myInt = (int) myDouble; // Manual casting: double to int\n```\n\n## Variable Naming Conventions\n\n- Must begin with a letter, $, or _\n- Cannot start with a number\n- Case sensitive\n- Cannot be a Java keyword\n- Use camelCase for variable names\n\n## Constants\n\nUse the `final` keyword to create constants:\n\n```java\nfinal double PI = 3.14159;\nfinal int MAX_USERS = 100;\n```"
+    },
+    {
+      "id": 3,
+      "title": "Classes and Objects",
+      "category": "oop",
+      "description": "Fundamental concepts of classes and objects in Object-Oriented Programming.",
+      "tags": ["classes", "objects", "oop", "instantiation"],
+      "content": "# Classes and Objects in Java\n\nClasses and objects are the fundamental building blocks of object-oriented programming in Java.\n\n## What is a Class?\n\nA class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods) that the objects created from the class will have.\n\n```java\n// Class definition\npublic class Car {\n    // Attributes (fields)\n    String brand;\n    String color;\n    int year;\n    \n    // Methods\n    void start() {\n        System.out.println(\"Car is starting...\");\n    }\n    \n    void stop() {\n        System.out.println(\"Car is stopping...\");\n    }\n}\n```\n\n## What is an Object?\n\nAn object is an instance of a class. When a class is defined, no memory is allocated until objects are created.\n\n```java\n// Creating objects\nCar myCar = new Car();\nCar yourCar = new Car();\n```\n\n## The 'new' Keyword\n\nThe `new` keyword is used to allocate memory for an object at runtime. All objects get memory in the Heap area.\n\n## Accessing Class Members\n\n```java\n// Setting attributes\nmyCar.brand = \"Toyota\";\nmyCar.color = \"Red\";\nmyCar.year = 2020;\n\n// Calling methods\nmyCar.start();\nmyCar.stop();\n```\n\n## Constructors\n\nConstructors are special methods used to initialize objects. They have the same name as the class and no return type.\n\n```java\npublic class Car {\n    String brand;\n    String color;\n    int year;\n    \n    // Default constructor\n    public Car() {\n        brand = \"Unknown\";\n        color = \"White\";\n        year = 2023;\n    }\n    \n    // Parameterized constructor\n    public Car(String brand, String color, int year) {\n        this.brand = brand;\n        this.color = color;\n        this.year = year;\n    }\n}\n\n// Using constructors\nCar car1 = new Car(); // Uses default constructor\nCar car2 = new Car(\"Honda\", \"Blue\", 2021); // Uses parameterized constructor\n```\n\n## The 'this' Keyword\n\n`this` refers to the current object in a method or constructor. It's used to differentiate between instance variables and parameters with the same name.\n\n## Class vs Object\n\n| Class | Object |\n|-------|--------|\n| Template/blueprint | Instance of a class |\n| Logical entity | Physical entity |\n| Doesn't occupy memory | Occupies memory |\n| Declared once | Can be created multiple times |\n| Group of similar objects | Member of a class |"
+    }
+  ]
+}
