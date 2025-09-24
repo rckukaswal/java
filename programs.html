@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programs - Java Learning Repository</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fab fa-java"></i>
+                    <span>Java Repository</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Notes</a></li>
+                        <li><a href="programs.html" class="active">Programs</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Programs Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Java Programs</h1>
+            <p>Explore our collection of Java programs from basic to advanced levels. Each program includes complete source code and explanations.</p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-listing">
+        <div class="container">
+            <div class="program-filters">
+                <div class="filter-group">
+                    <h3>Filter by Category:</h3>
+                    <div class="filter-buttons" id="categoryFilters">
+                        <!-- Categories will be loaded by JavaScript -->
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Filter by Difficulty:</h3>
+                    <div class="filter-buttons" id="difficultyFilters">
+                        <button class="filter-btn active" data-difficulty="all">All</button>
+                        <button class="filter-btn" data-difficulty="beginner">Beginner</button>
+                        <button class="filter-btn" data-difficulty="intermediate">Intermediate</button>
+                        <button class="filter-btn" data-difficulty="advanced">Advanced</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="programs-grid" id="programsContainer">
+                <!-- Programs will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Repository</h3>
+                    <p>This Java repository is designed to provide comprehensive learning materials for Java programming.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes.html">Java Notes</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Java Learning Repository. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/programs.js"></script>
+</body>
+</html>
