@@ -1,0 +1,42 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "title": "Hello World Program",
+      "description": "A simple Java program to print 'Hello, World!' to the console.",
+      "category": "basics",
+      "difficulty": "beginner",
+      "tags": ["output", "basic syntax"],
+      "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+      "explanation": "This is the most basic Java program that demonstrates how to create a class and use the main method."
+    },
+    {
+      "id": 2,
+      "title": "Calculator Application",
+      "description": "A simple calculator that performs basic arithmetic operations.",
+      "category": "oop",
+      "difficulty": "intermediate",
+      "tags": ["classes", "methods", "arithmetic"],
+      "code": "import java.util.Scanner;\n\npublic class Calculator {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        \n        System.out.print(\"Enter first number: \");\n        double num1 = scanner.nextDouble();\n        \n        System.out.print(\"Enter second number: \");\n        double num2 = scanner.nextDouble();\n        \n        System.out.print(\"Enter operator (+, -, *, /): \");\n        char operator = scanner.next().charAt(0);\n        \n        double result;\n        \n        switch(operator) {\n            case '+':\n                result = num1 + num2;\n                break;\n            case '-':\n                result = num1 - num2;\n                break;\n            case '*':\n                result = num1 * num2;\n                break;\n            case '/':\n                result = num1 / num2;\n                break;\n            default:\n                System.out.println(\"Invalid operator!\");\n                return;\n        }\n        \n        System.out.println(\"Result: \" + result);\n    }\n}",
+      "explanation": "This program demonstrates basic input/output, switch statements, and arithmetic operations in Java."
+    },
+    {
+      "id": 3,
+      "title": "Student Management System",
+      "description": "A console-based student management system using OOP concepts.",
+      "category": "oop",
+      "difficulty": "advanced",
+      "tags": ["classes", "objects", "arrays", "methods"],
+      "code": "import java.util.ArrayList;\nimport java.util.Scanner;\n\nclass Student {\n    private String name;\n    private int rollNumber;\n    private double marks;\n    \n    public Student(String name, int rollNumber, double marks) {\n        this.name = name;\n        this.rollNumber = rollNumber;\n        this.marks = marks;\n    }\n    \n    // Getters and setters\n    public String getName() { return name; }\n    public int getRollNumber() { return rollNumber; }\n    public double getMarks() { return marks; }\n    \n    @Override\n    public String toString() {\n        return \"Roll No: \" + rollNumber + \", Name: \" + name + \", Marks: \" + marks;\n    }\n}\n\npublic class StudentManagement {\n    private ArrayList<Student> students = new ArrayList<>();\n    private Scanner scanner = new Scanner(System.in);\n    \n    public void addStudent() {\n        System.out.print(\"Enter student name: \");\n        String name = scanner.nextLine();\n        \n        System.out.print(\"Enter roll number: \");\n        int rollNumber = scanner.nextInt();\n        \n        System.out.print(\"Enter marks: \");\n        double marks = scanner.nextDouble();\n        scanner.nextLine(); // consume newline\n        \n        students.add(new Student(name, rollNumber, marks));\n        System.out.println(\"Student added successfully!\");\n    }\n    \n    public void displayStudents() {\n        if (students.isEmpty()) {\n            System.out.println(\"No students to display!\");\n            return;\n        }\n        \n        for (Student student : students) {\n            System.out.println(student);\n        }\n    }\n    \n    public static void main(String[] args) {\n        StudentManagement system = new StudentManagement();\n        Scanner scanner = new Scanner(System.in);\n        \n        while (true) {\n            System.out.println(\"\\n1. Add Student\");\n            System.out.println(\"2. Display Students\");\n            System.out.println(\"3. Exit\");\n            System.out.print(\"Choose an option: \");\n            \n            int choice = scanner.nextInt();\n            scanner.nextLine(); // consume newline\n            \n            switch (choice) {\n                case 1:\n                    system.addStudent();\n                    break;\n                case 2:\n                    system.displayStudents();\n                    break;\n                case 3:\n                    System.out.println(\"Exiting...\");\n                    return;\n                default:\n                    System.out.println(\"Invalid choice!\");\n            }\n        }\n    }\n}",
+      "explanation": "This program demonstrates Object-Oriented Programming concepts including classes, objects, encapsulation, and ArrayList usage."
+    }
+  ],
+  "categories": [
+    {"id": "basics", "name": "Java Basics", "count": 15},
+    {"id": "oop", "name": "Object-Oriented Programming", "count": 20},
+    {"id": "collections", "name": "Collections Framework", "count": 10},
+    {"id": "exceptions", "name": "Exception Handling", "count": 8},
+    {"id": "multithreading", "name": "Multithreading", "count": 7},
+    {"id": "file-io", "name": "File I/O", "count": 5}
+  ]
+}
